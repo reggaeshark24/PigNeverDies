@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: fafb8ffc8552f18459cff73882e6cd97
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - musicSource: {instanceID: 0}
+  - sfxSource: {instanceID: 0}
+  - jumpSfx: {fileID: 8300000, guid: 18742685ade965b4d86f8b05d09ed28c, type: 3}
+  - coinSfx: {instanceID: 0}
+  - deathSfx: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

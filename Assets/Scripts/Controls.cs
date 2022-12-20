@@ -25,6 +25,8 @@ public class Controls : MonoBehaviour
     public Stopwatch timing;
     public long cooldown;
 
+    public SoundManager soundManager; // ref to the SoundManager
+
 
     // Start is called before the first frame update
     void Start()
@@ -45,7 +47,7 @@ public class Controls : MonoBehaviour
         //grabs horizontal movement input
         inputX = Input.GetAxisRaw("Horizontal");
         inputY = Input.GetAxisRaw("Vertical");
-
+        // sets bind for attack and applies a 0.5 sec cooldown
         if (Input.GetKeyDown("f"))
         {
             timing.Stop();
@@ -57,6 +59,8 @@ public class Controls : MonoBehaviour
             }
             timing.Start();
         }
+
+        
     }
 
     //putting physics + animation triggers in fixed update
@@ -80,6 +84,8 @@ public class Controls : MonoBehaviour
         if(!isJumping && inputY > 0)
         {
           rb.AddForce(new Vector2(0f, inputY * jumpForce), ForceMode2D.Impulse);
+          // calls jump sound effect on action
+          soundManager.PlayJumpSfx();
         }
 
 
